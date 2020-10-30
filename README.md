@@ -1,12 +1,25 @@
 # lib_Vonage
 This is the Convertigo connector to Vonage API for SMS, Whatsapp, facebook messenger and MMS messaging  services.
 
-## Usage
+## Installation
 Use file->import->Convertigo Project and paste
 
 ```
-lib_Vonage=https://github.com/convertigo/c8oprj-lib-vonage
+lib_Vonage=https://github.com/convertigo/c8oprj-lib-vonage.git
 ```
 In the Project Remote Url field
+
+## Usage
+### Configuring symbols
+This library needs 2 symbols :
+```
+lib_Vonage.apiKey
+lib_Vonage.apiSecret.secret
+```
+Configure these symbols to the correct value you find in the Vonage API dashboard
+
+https://dashboard.nexmo.com/
+
+
 
 
