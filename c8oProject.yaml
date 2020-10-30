@@ -7,3 +7,7 @@
   ↓buildAuthorization [sequences.GenericSequence]: 🗏 sequences/buildAuthorization.yaml
   ↓sendSMS [sequences.GenericSequence]: 🗏 sequences/sendSMS.yaml
   ↓sendWhatsapp [sequences.GenericSequence]: 🗏 sequences/sendWhatsapp.yaml
+  ↓Mobile_application [core.MobileApplication]: 
+    ↓Android [mobileplatforms.Android]: 
+    ↓iOS [mobileplatforms.IOs]: 
+    ↓Application [mobile.components.ApplicationComponent]: 🗏 mobileApplication.yaml

@@ -1,0 +1,31 @@
+↑isRoot: true
+segment: path-to-page
+title: Title for Page
+↓Content [mobile.components.UIDynamicElement-1604075160451]: 
+  beanData: '{"ionBean":"Content"}'
+  tagName: ion-content
+  ↓H1 [mobile.components.UIDynamicElement-1604075196588]: 
+    beanData: '{"ionBean":"Heading1"}'
+    tagName: h1
+    ↓Text [mobile.components.UIText-1604075203961]: 
+      textValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: plain:Open Tok Vonage Demo
+  ↓Grid [mobile.components.UIDynamicElement-1604078592698]: 
+    beanData: '{"ionBean":"Grid","Height":"plain:height:100%"}'
+    tagName: ion-grid
+    ↓GridRow [mobile.components.UIDynamicElement-1604078597567]: 
+      beanData: '{"ionBean":"GridRow","Height":"plain:height:100%"}'
+      tagName: ion-row
+      ↓GridCol1 [mobile.components.UIDynamicElement-1604078635705]: 
+        beanData: '{"ionBean":"GridCol"}'
+        tagName: ion-col
+      ↓GridCol [mobile.components.UIDynamicElement-1604078602216]: 
+        beanData: '{"ionBean":"GridCol"}'
+        tagName: ion-col
+        ↓UseSharedComponent [mobile.components.UIUseShared-1604075221708]: 
+          sharedcomponent: lib_Vonage.Mobile_application.Application.VonageVideo
+      ↓GridCol2 [mobile.components.UIDynamicElement-1604078639785]: 
+        beanData: '{"ionBean":"GridCol"}'
+        tagName: ion-col

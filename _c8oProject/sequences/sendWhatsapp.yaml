@@ -135,7 +135,7 @@ comment: send a WhatsApp message  to anyone
   comment: An optional Client ref
 ↓testOK [core.TestCase]: 
   ↓from [variables.TestCaseVariable-1604059705855]: 
-    value: 14157386170
+    value: +14157386170
   ↓to [variables.TestCaseVariable-1604059705858]: 
     value: 33673890927
   ↓message [variables.TestCaseVariable-1604059705861]: 
