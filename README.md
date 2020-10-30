@@ -28,6 +28,6 @@ sequence | usage
 ------------| -------
 sendSMS     | send a SMS to anyone
 sendWhatspp | send a WhatsApp Message
------------------------------------------
+
 
 
