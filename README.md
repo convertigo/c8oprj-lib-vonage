@@ -20,6 +20,14 @@ Configure these symbols to the correct value you find in the Vonage API dashboar
 
 https://dashboard.nexmo.com/
 
+### Sequences
+
+Youc can use the following sequences in your project :
+
+sequence | usage
+-------------------
+sendSMS     | send a SMS to anyone
+sendWhatspp | send a WhatsApp Message
 
 
 
