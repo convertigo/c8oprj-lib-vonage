@@ -1,5 +1,5 @@
 # lib_Vonage
-This is the Convertigo connector to Vonage API for SMS, Whatsapp, facebook messenger and MMS messaging  services.
+This is the Convertigo connector to Vonage API for SMS, Viber, Whatsapp, Facebook Messenger and MMS messaging services.
 
 ## Installation
 Use file->import->Convertigo Project and paste
