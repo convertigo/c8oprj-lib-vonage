@@ -25,9 +25,9 @@ https://dashboard.nexmo.com/
 Youc can use the following sequences in your project :
 
 sequence | usage
--------------------
+------------| -------
 sendSMS     | send a SMS to anyone
 sendWhatspp | send a WhatsApp Message
-
+-----------------------------------------
 
 
