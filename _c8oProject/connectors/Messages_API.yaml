@@ -4,6 +4,7 @@ https: true
 port: 443
 server: api.nexmo.com
 ↓__POST [transactions.JsonHttpTransaction]: 
+  accessibility: Private
   comment: Send a Message
   httpInfo: true
   httpParameters: 
