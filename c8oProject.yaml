@@ -1,0 +1,9 @@
+↑convertigo: 7.8.1.m006
+↓lib_Vonage [core.Project]: 
+  comment: The Vonage communication connector library for SMS, Whatsup, Viber facebook messenger and MMS
+  version: 1.0
+  ↓Messages_API [connectors.HttpConnector]: 🗏 connectors/Messages_API.yaml
+  ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml
+  ↓buildAuthorization [sequences.GenericSequence]: 🗏 sequences/buildAuthorization.yaml
+  ↓sendSMS [sequences.GenericSequence]: 🗏 sequences/sendSMS.yaml
+  ↓sendWhatsapp [sequences.GenericSequence]: 🗏 sequences/sendWhatsapp.yaml

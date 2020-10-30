@@ -1,0 +1,16 @@
+accessibility: Private
+↓buildAuthorization [steps.SimpleStep-1604058025220]: 
+  expression: |
+    jAuthorization = "Basic " + com.twinsoft.convertigo.engine.util.Base64.encodeString(apiKey + ":" + apiSecret);
+    
+↓jElement1 [steps.ElementStep-1604058241274]: 
+  expression: jAuthorization
+  nodeName: Authorization
+↓apiKey [variables.RequestableVariable-1604057806009]: 
+  value: ${lib_Vonage.apiKey}
+↓apiSecret [variables.RequestableVariable-1604057812950]: 
+  value: 
+    - ↑ciphered: true
+    - ↑traceable: false
+    - →→: xad49ba337b639c4fc14582aedf9f09a719f1d026fc26daff05f40dae884cc4f8
+  visibility: '-1'
