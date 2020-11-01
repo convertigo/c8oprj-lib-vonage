@@ -126,9 +126,9 @@ comment: send a SMS to anyone
         - java.lang.String: 
           - ↑value: ./document/object/*
 ↓from [variables.RequestableVariable-1604058729192]: 
-  comment: The sender Phone No (as +<CountryCode><PhoneNumber)
+  comment: The sender Phone No (as <CountryCode><PhoneNumber>)
 ↓to [variables.RequestableVariable-1604058736941]: 
-  comment: The recipient Phone No (as +<CountryCode><PhoneNumber)
+  comment: The recipient Phone No (as <CountryCode><PhoneNumber>)
 ↓message [variables.RequestableVariable-1604058778267]: 
   comment: The message
 ↓client_ref [variables.RequestableVariable-1604058810878]: 
