@@ -1,4 +1,5 @@
 accessibility: Private
+comment: Used for Messaging APIs
 ↓buildAuthorization [steps.SimpleStep-1604058025220]: 
   expression: |
     jAuthorization = "Basic " + com.twinsoft.convertigo.engine.util.Base64.encodeString(apiKey + ":" + apiSecret);

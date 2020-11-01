@@ -5,40 +5,38 @@
         - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
         - com.twinsoft.convertigo.beans.common.FormatedContent: 
           →: |
-            '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
-            		var session = OT.initSession(vars.apiKey, vars.sessionId);
-            
-            		session.on(''streamCreated'', function(event) {
-            		     session.subscribe(event.stream, ''subscriber'', {
-            		       insertMode: ''append'',
-            		       width: ''100%'',
-            		       height: ''100%''
-            		     }, () => {
-            		         
-            		     });
-            		});		
-            		
-            		const publisher = OT.initPublisher(''publisher'', {
-            		        insertMode: ''append'',
-            		        width: ''100%'',
-            		        height: ''100%''
-            		      }, ()=> {
-            		          
-            		})
-            		      
-            		// Connect to the session
-                    session.connect(vars.token, function(error) {
-                        // If the connection is successful, initialize a publisher and publish to the session
-                        if (error) {
-                          // handleError(error);
-                        } else {
-                          session.publish(publisher, ()=> {
-                              
-                          });
-                        }
-                    });
-            		
-            		resolve();
+            '    		function handleError(error) {
+                		    if (error) {
+                                page.c8o.log.error(''[OpenTok] error : '' + error);
+                		    }
+                		}
+                		
+                		var session = OT.initSession(vars.apiKey, vars.sessionId);
+                		session.on(''streamCreated'', function(event) {
+                		     session.subscribe(event.stream, ''subscriber'', {
+                		       insertMode: ''append'',
+                		       width: ''100%'',
+                		       height: ''100%''
+                		     }, handleError);
+                		});		
+                		
+                		const publisher = OT.initPublisher(''publisher'', {
+                		        insertMode: ''append'',
+                		        width: ''100%'',
+                		        height: ''100%''
+                		}, handleError)
+                		      
+                		// Connect to the session
+                        session.connect(vars.token, function(error) {
+                            // If the connection is successful, initialize a publisher and publish to the session
+                            if (error) {
+                                handleError(error);
+                            } else {
+                                session.publish(publisher, handleError);
+                            }
+                        });
+                		
+                		resolve();
             '
     module_ts_imports: 
       - xmlizable: 

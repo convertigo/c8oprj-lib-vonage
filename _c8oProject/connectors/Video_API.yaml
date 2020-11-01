@@ -1,0 +1,23 @@
+port: 443
+server: api.opentok.com
+↓Default_transaction [transactions.HttpTransaction]: 
+  ↑default: true
+↓session_create [transactions.JsonHttpTransaction]: 
+  httpParameters: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Content-Type
+            - java.lang.String: 
+              - ↑value: application/x-www-form-urlencoded
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Accept
+            - java.lang.String: 
+              - ↑value: application/json
