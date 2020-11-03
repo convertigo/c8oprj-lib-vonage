@@ -1,3 +1,4 @@
+https: true
 port: 443
 server: api.opentok.com
 ↓Default_transaction [transactions.HttpTransaction]: 
@@ -21,3 +22,16 @@ server: api.opentok.com
               - ↑value: Accept
             - java.lang.String: 
               - ↑value: application/json
+  httpVerb: POST
+  subDir: session/create
+  ↓archiveMode [variables.RequestableHttpVariable-1604404162780]: 
+    httpMethod: POST
+    httpName: archiveMode
+    value: manual
+  ↓location [variables.RequestableHttpVariable-1604404176908]: 
+    httpMethod: POST
+    httpName: location
+  ↓p2pPreference [variables.RequestableHttpVariable-1604404190550]: 
+    httpMethod: POST
+    httpName: p2p.preference
+    value: disabled

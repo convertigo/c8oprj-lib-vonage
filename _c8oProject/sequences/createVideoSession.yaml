@@ -1,0 +1,58 @@
+↓Concat [steps.XMLConcatStep-1604404366974]: 
+  nodeName: header
+  output: false
+  separator: ':'
+  sourcesDefinition: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: description
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+              - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: ${lib_Vonage.video.apiKey}
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: description
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+              - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: ${lib_Vonage.video.apiSecret.secret}
+↓Call_Transaction [steps.TransactionStep-1604404291149]: 
+  sourceTransaction: lib_Vonage.Video_API.session_create
+  ↓__header_X-TB-PARTNER-AUTH [variables.StepVariable-1604404475613]: 
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1604404366974
+          - java.lang.String: 
+            - ↑value: ./text()
+  ↓archiveMode [variables.StepVariable-1604404291151]: 
+    value: manual
+  ↓location [variables.StepVariable-1604404291153]: 
+  ↓p2pPreference [variables.StepVariable-1604404291155]: 
+    value: disabled
+↓Copy [steps.XMLCopyStep-1604404679519]: 
+  sourceDefinition: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - java.lang.String: 
+          - ↑value: 1604404291149
+        - java.lang.String: 
+          - ↑value: ./document/*
+↓archiveMode [variables.RequestableVariable-1604404308185]: 
+  value: manual
+↓location [variables.RequestableVariable-1604404308187]: 
+↓p2pPreference [variables.RequestableVariable-1604404308189]: 
+  value: disabled

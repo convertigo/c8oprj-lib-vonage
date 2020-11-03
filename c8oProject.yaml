@@ -7,6 +7,7 @@
   ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml
   ↓buildAuthorization [sequences.GenericSequence]: 🗏 sequences/buildAuthorization.yaml
   ↓buildJWT [sequences.GenericSequence]: 🗏 sequences/buildJWT.yaml
+  ↓createVideoSession [sequences.GenericSequence]: 🗏 sequences/createVideoSession.yaml
   ↓sendSMS [sequences.GenericSequence]: 🗏 sequences/sendSMS.yaml
   ↓sendWhatsapp [sequences.GenericSequence]: 🗏 sequences/sendWhatsapp.yaml
   ↓Mobile_application [core.MobileApplication]: 
