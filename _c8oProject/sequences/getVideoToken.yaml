@@ -1,0 +1,15 @@
+↓getToken [steps.SimpleStep-1604684385618]: 
+  expression: |
+    session = context.httpSession.getAttribute("vonage.session");
+    
+    log.debug("****" + session);
+    
+    jToken = session.generateToken(new com.opentok.TokenOptions.Builder()
+    	.role(com.opentok.Role.MODERATOR)
+    	.expireTime((new Date().getTime() / 1000) + (7 * 24 * 60 * 60)) // in one week
+    	.data("name=Johnny")
+    	.build());
+    
+↓jElement [steps.ElementStep-1604684494825]: 
+  expression: jToken
+  nodeName: token

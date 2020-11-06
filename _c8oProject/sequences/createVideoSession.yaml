@@ -1,58 +1,25 @@
-↓Concat [steps.XMLConcatStep-1604404366974]: 
-  nodeName: header
-  output: false
-  separator: ':'
-  sourcesDefinition: 
-    - xmlizable: 
-      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
-      - com.twinsoft.convertigo.beans.common.XMLVector: 
-        - xmlizable: 
-          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
-          - com.twinsoft.convertigo.beans.common.XMLVector: 
-            - java.lang.String: 
-              - ↑value: description
-            - xmlizable: 
-              - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
-              - com.twinsoft.convertigo.beans.common.XMLVector: 
-            - java.lang.String: 
-              - ↑value: ${lib_Vonage.video.apiKey}
-        - xmlizable: 
-          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
-          - com.twinsoft.convertigo.beans.common.XMLVector: 
-            - java.lang.String: 
-              - ↑value: description
-            - xmlizable: 
-              - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
-              - com.twinsoft.convertigo.beans.common.XMLVector: 
-            - java.lang.String: 
-              - ↑value: ${lib_Vonage.video.apiSecret.secret}
-↓Call_Transaction [steps.TransactionStep-1604404291149]: 
-  sourceTransaction: lib_Vonage.Video_API.session_create
-  ↓__header_X-TB-PARTNER-AUTH [variables.StepVariable-1604404475613]: 
-    sourceDefinition: 
-      - xmlizable: 
-        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
-        - com.twinsoft.convertigo.beans.common.XMLVector: 
-          - java.lang.String: 
-            - ↑value: 1604404366974
-          - java.lang.String: 
-            - ↑value: ./text()
-  ↓archiveMode [variables.StepVariable-1604404291151]: 
-    value: manual
-  ↓location [variables.StepVariable-1604404291153]: 
-  ↓p2pPreference [variables.StepVariable-1604404291155]: 
-    value: disabled
-↓Copy [steps.XMLCopyStep-1604404679519]: 
-  sourceDefinition: 
-    - xmlizable: 
-      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
-      - com.twinsoft.convertigo.beans.common.XMLVector: 
-        - java.lang.String: 
-          - ↑value: 1604404291149
-        - java.lang.String: 
-          - ↑value: ./document/*
-↓archiveMode [variables.RequestableVariable-1604404308185]: 
-  value: manual
-↓location [variables.RequestableVariable-1604404308187]: 
-↓p2pPreference [variables.RequestableVariable-1604404308189]: 
-  value: disabled
+↓createVideoSession [steps.SimpleStep-1604513680208]: 
+  expression: |
+    ot = com.opentok.OpenTok.Builder(apiKey, apiSecret)
+    				.requestTimeout(10000)
+    				.build();
+    
+    session = ot.createSession(new com.opentok.SessionProperties.Builder()
+    				.mediaMode(com.opentok.MediaMode.ROUTED)
+    				.build());
+    
+    context.httpSession.setAttribute("vonage.session", session);
+    jSessionID = session.getSessionId();
+    
+    
+↓jElement [steps.ElementStep-1604668973224]: 
+  expression: jSessionID
+  nodeName: sessionID
+↓apiKey [variables.RequestableVariable-1604513866988]: 
+  value: ${lib_Vonage.video.apiKey}
+↓apiSecret [variables.RequestableVariable-1604513874282]: 
+  value: 
+    - ↑ciphered: true
+    - ↑traceable: false
+    - →→: x20f216936e4bc1842bcfc6f43c208571923c2950e45f8ca3d5673843bdfd0e053fabd878786233f5613b9778cdf0af0f
+  visibility: '-1'
