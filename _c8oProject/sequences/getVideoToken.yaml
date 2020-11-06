@@ -1,15 +1,54 @@
 ↓getToken [steps.SimpleStep-1604684385618]: 
   expression: |
-    session = context.httpSession.getAttribute("vonage.session");
+    'session = context.httpSession.getAttribute("vonage.session");
     
-    log.debug("****" + session);
+    if (role == "MODERATOR")
+    	cRole = com.opentok.Role.MODERATOR;
+    else if (role == "PUBLISHER")
+    	cRole = com.opentok.Role.PUBLISHER;
+    else if (role == "SUBSCRIBER")
+    	cRole = com.opentok.Role.SUBSCRIBER;
+    else {
+    	log.error("lib_Vonage, Invalid role asked, must be MODERATOR, PUBLISHER or SUBSCRIBER: " +role);
+    }
     
     jToken = session.generateToken(new com.opentok.TokenOptions.Builder()
-    	.role(com.opentok.Role.MODERATOR)
-    	.expireTime((new Date().getTime() / 1000) + (7 * 24 * 60 * 60)) // in one week
-    	.data("name=Johnny")
+    	.role(cRole)
+    	.expireTime((new Date().getTime() / 1000) + expire) // in one week
+    	.data(data)
     	.build());
-    
+    '
 ↓jElement [steps.ElementStep-1604684494825]: 
   expression: jToken
   nodeName: token
+↓role [variables.RequestableVariable-1604685671575]: 
+↓data [variables.RequestableVariable-1604685685998]: 
+↓expire [variables.RequestableVariable-1604685901822]: 
+↓Error [core.TestCase]: 
+  ↓role [variables.TestCaseVariable-1604686289169]: 
+    value: NONE
+  ↓data [variables.TestCaseVariable-1604686289172]: 
+    value: name=Johnny
+  ↓expire [variables.TestCaseVariable-1604686289175]: 
+    value: 604800
+↓RoleModerator [core.TestCase]: 
+  ↓role [variables.TestCaseVariable-1604686269026]: 
+    value: MODERATOR
+  ↓data [variables.TestCaseVariable-1604686269029]: 
+    value: name=Johnny
+  ↓expire [variables.TestCaseVariable-1604686269032]: 
+    value: 604800
+↓RolePublisher [core.TestCase]: 
+  ↓role [variables.TestCaseVariable-1604685931113]: 
+    value: PUBLISHER
+  ↓data [variables.TestCaseVariable-1604685931115]: 
+    value: name=Johnny
+  ↓expire [variables.TestCaseVariable-1604685931117]: 
+    value: 604800
+↓RoleSubscriber [core.TestCase]: 
+  ↓role [variables.TestCaseVariable-1604686241617]: 
+    value: SUBSCRIBER
+  ↓data [variables.TestCaseVariable-1604686241620]: 
+    value: name=Johnny
+  ↓expire [variables.TestCaseVariable-1604686241623]: 
+    value: 604800
