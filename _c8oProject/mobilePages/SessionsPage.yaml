@@ -97,10 +97,10 @@ title: Title for Page
               beanData: |
                 '{
                  "ionBean": "PushPageAction",
-                 "page": "plain:lib_Vonage.Mobile_application.Application.VideoPage",
+                 "page": "plain:lib_Vonage.Mobile_application.Application.VideoPagePublish",
                  "data": "source:{\"filter\":\"Iteration\",\"project\":\"lib_Vonage\",\"input\":\"item1604828803946?.value\"}"
                 }'
-        ↓SlidingOption [mobile.components.UIDynamicElement-1604842069845]: 
+        ↓SlidingOptionLeft [mobile.components.UIDynamicElement-1604842069845]: 
           beanData: '{"ionBean":"SlidingOption","side":"plain:left"}'
           tagName: ion-item-options
           ↓Button [mobile.components.UIDynamicElement-1604842105009]: 
@@ -122,6 +122,41 @@ title: Title for Page
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                       - MobileSmartSourceType: source:{"filter":"Iteration","project":"lib_Vonage","input":"item1604828803946?.id"}
+        ↓SlidingOptionRight [mobile.components.UIDynamicElement-1604935222173]: 
+          beanData: '{"ionBean":"SlidingOption","side":"plain:right"}'
+          tagName: ion-item-options
+          ↓Button [mobile.components.UIDynamicElement-1604935222176]: 
+            beanData: '{"ionBean":"Button","IonColor":"plain:primary"}'
+            tagName: button
+            ↓Text [mobile.components.UIText-1604935222179]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:Publish
+            ↓Event [mobile.components.UIControlEvent-1604935421170]: 
+              ↓PushPagePublishVideo [mobile.components.UIDynamicAction-1604935421173]: 
+                beanData: |
+                  '{
+                   "ionBean": "PushPageAction",
+                   "page": "plain:lib_Vonage.Mobile_application.Application.VideoPagePublish",
+                   "data": "source:{\"filter\":\"Iteration\",\"project\":\"lib_Vonage\",\"input\":\"item1604828803946?.value\"}"
+                  }'
+          ↓Button1 [mobile.components.UIDynamicElement-1604935234381]: 
+            beanData: '{"ionBean":"Button","IonColor":"plain:secondary"}'
+            tagName: button
+            ↓Text [mobile.components.UIText-1604935234384]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:Subscribe
+            ↓Event [mobile.components.UIControlEvent-1604935450418]: 
+              ↓PushPageSubscribeVideo [mobile.components.UIDynamicAction-1604935450421]: 
+                beanData: |
+                  '{
+                   "ionBean": "PushPageAction",
+                   "page": "plain:lib_Vonage.Mobile_application.Application.VideoPageSubscribe",
+                   "data": "source:{\"filter\":\"Iteration\",\"project\":\"lib_Vonage\",\"input\":\"item1604828803946?.value\"}"
+                  }'
 ↓PageEvent [mobile.components.UIPageEvent-1604750314474]: 
   ↓CallSequenceListVideoSessions [mobile.components.UIDynamicAction-1604750320818]: 
     beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:lib_Vonage.ApplistAvailableVideoSessions"}'
