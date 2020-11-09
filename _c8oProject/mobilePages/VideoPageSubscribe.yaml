@@ -29,7 +29,7 @@ title: Title for VideoPagePublish1
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-            - MobileSmartSourceType: plain:Publishing Video
+            - MobileSmartSourceType: plain:Subscribing to Video
     ↓Button [mobile.components.UIDynamicElement-1604935551098]: 
       beanData: '{"ionBean":"Button","MenuMode":"plain:menuToggle"}'
       comment: A button to toggle the menu
