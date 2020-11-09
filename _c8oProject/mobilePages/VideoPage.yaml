@@ -1,3 +1,17 @@
+scriptContent: 
+  - xmlizable: 
+    - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+    - com.twinsoft.convertigo.beans.common.FormatedContent: 
+      →: |
+        /*Begin_c8o_PageImport*/
+        /*End_c8o_PageImport*/
+        /*Begin_c8o_PageDeclaration*/
+        	/*End_c8o_PageDeclaration*/
+        /*Begin_c8o_PageConstructor*/
+        		/*End_c8o_PageConstructor*/
+        /*Begin_c8o_PageFunction*/
+        	/*End_c8o_PageFunction*/
+        
 segment: path-to-videopage
 title: Title for VideoPage
 ↓Header [mobile.components.UIDynamicElement-1604828111241]: 
@@ -36,7 +50,6 @@ title: Title for VideoPage
   viewEvent: onWillEnter
   ↓CallSequenceGetVideoToken [mobile.components.UIDynamicAction-1604846281871]: 
     beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:lib_Vonage.ApiGetVideoToken"}'
-    isEnabled: false
     ↓role [mobile.components.UIControlVariable-1604846349764]: 
       comment: new variable
       varValue: 
@@ -83,25 +96,25 @@ title: Title for VideoPage
             varValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                - MobileSmartSourceType: script:'AAAA'
+                - MobileSmartSourceType: script:this.navParams.data
           ↓token [mobile.components.UIControlVariable-1604854278507]: 
             comment: The token for connection
             varValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                - MobileSmartSourceType: script:'BBB'
+                - MobileSmartSourceType: source:{"filter":"Sequence","project":"lib_Vonage","input":"listen(['lib_Vonage.ApiGetVideoToken'])?.token"}
           ↓apiKey [mobile.components.UIControlVariable-1604854278509]: 
             comment: The apiKey as declared in the API portal
             varValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                - MobileSmartSourceType: script:'CCC'
+                - MobileSmartSourceType: source:{"filter":"Global","project":"lib_Vonage","input":"router.sharedObject?.videoApiKey"}
           ↓mode [mobile.components.UIControlVariable-1604854278511]: 
             comment: The mode, can be publisher, subscriber or moderator
             varValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                - MobileSmartSourceType: script:'PUBLISHER'
+                - MobileSmartSourceType: script:'publisher'
       ↓GridCol2 [mobile.components.UIDynamicElement-1604828724742]: 
         beanData: '{"ionBean":"GridCol"}'
         tagName: ion-col
