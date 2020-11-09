@@ -1,6 +1,8 @@
 ↓getToken [steps.SimpleStep-1604684385618]: 
   expression: |
-    'session = context.httpSession.getAttribute("vonage.session");
+    'ot = com.opentok.OpenTok(apiKey, apiSecret);
+    
+    log.debug("[lib_Vonage] generating token for session :"  + sessionID);
     
     if (role == "MODERATOR")
     	cRole = com.opentok.Role.MODERATOR;
@@ -9,14 +11,19 @@
     else if (role == "SUBSCRIBER")
     	cRole = com.opentok.Role.SUBSCRIBER;
     else {
-    	log.error("lib_Vonage, Invalid role asked, must be MODERATOR, PUBLISHER or SUBSCRIBER: " +role);
+    	log.error("[lib_Vonage] Invalid role asked, must be MODERATOR, PUBLISHER or SUBSCRIBER: " +role);
     }
     
-    jToken = session.generateToken(new com.opentok.TokenOptions.Builder()
+    jToken =  ot.generateToken(sessionID, new com.opentok.TokenOptions.Builder()
     	.role(cRole)
-    	.expireTime((new Date().getTime() / 1000) + expire) // in one week
+    	.expireTime(new Date().getTime() / 1000 + (expire * 1)) // in one week
     	.data(data)
-    	.build());
+    	.build()
+    );
+    
+    ot.close();
+    
+    
     '
 ↓jElement [steps.ElementStep-1604684494825]: 
   expression: jToken
@@ -24,6 +31,15 @@
 ↓role [variables.RequestableVariable-1604685671575]: 
 ↓data [variables.RequestableVariable-1604685685998]: 
 ↓expire [variables.RequestableVariable-1604685901822]: 
+↓sessionID [variables.RequestableVariable-1604845106081]: 
+↓apiKey [variables.RequestableVariable-1604845262201]: 
+  value: ${lib_Vonage.video.apiKey}
+↓apiSecret [variables.RequestableVariable-1604845262204]: 
+  value: 
+    - ↑ciphered: true
+    - ↑traceable: false
+    - →→: x20f216936e4bc1842bcfc6f43c208571923c2950e45f8ca3d5673843bdfd0e053fabd878786233f5613b9778cdf0af0f
+  visibility: '-1'
 ↓Error [core.TestCase]: 
   ↓role [variables.TestCaseVariable-1604686289169]: 
     value: NONE
@@ -38,6 +54,8 @@
     value: name=Johnny
   ↓expire [variables.TestCaseVariable-1604686269032]: 
     value: 604800
+  ↓sessionID [variables.TestCaseVariable-1604845427626]: 
+    value: 1_MX40Njk3MTExNH5-MTYwNDg0NTA2MjU4NX5BaDc2S2M3Z1JMWnM4L3RlVVNnL0RuOTB-fg
 ↓RolePublisher [core.TestCase]: 
   ↓role [variables.TestCaseVariable-1604685931113]: 
     value: PUBLISHER
@@ -45,6 +63,8 @@
     value: name=Johnny
   ↓expire [variables.TestCaseVariable-1604685931117]: 
     value: 604800
+  ↓sessionID [variables.TestCaseVariable-1604845455209]: 
+    value: 1_MX40Njk3MTExNH5-MTYwNDg0NTA2MjU4NX5BaDc2S2M3Z1JMWnM4L3RlVVNnL0RuOTB-fg
 ↓RoleSubscriber [core.TestCase]: 
   ↓role [variables.TestCaseVariable-1604686241617]: 
     value: SUBSCRIBER
@@ -52,3 +72,5 @@
     value: name=Johnny
   ↓expire [variables.TestCaseVariable-1604686241623]: 
     value: 604800
+  ↓sessionID [variables.TestCaseVariable-1604845459752]: 
+    value: 1_MX40Njk3MTExNH5-MTYwNDg0NTA2MjU4NX5BaDc2S2M3Z1JMWnM4L3RlVVNnL0RuOTB-fg

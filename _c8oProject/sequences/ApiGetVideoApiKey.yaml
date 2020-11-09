@@ -1,0 +1,5 @@
+↓jElement [steps.ElementStep-1604845988197]: 
+  expression: apiKey
+  nodeName: apiKey
+↓apiKey [variables.RequestableVariable-1604845923634]: 
+  value: ${lib_Vonage.video.apiKey}

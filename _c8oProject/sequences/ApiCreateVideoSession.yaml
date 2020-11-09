@@ -8,13 +8,16 @@
     				.mediaMode(com.opentok.MediaMode.ROUTED)
     				.build());
     
-    context.httpSession.setAttribute("vonage.session", session);
     jSessionID = session.getSessionId();
     
+    ot.close();
     
 ↓jElement [steps.ElementStep-1604668973224]: 
   expression: jSessionID
   nodeName: sessionID
+↓jElement1 [steps.ElementStep-1604733393296]: 
+  expression: apiKey
+  nodeName: apiKey
 ↓apiKey [variables.RequestableVariable-1604513866988]: 
   value: ${lib_Vonage.video.apiKey}
 ↓apiSecret [variables.RequestableVariable-1604513874282]: 

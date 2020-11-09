@@ -2,16 +2,22 @@
 ↓lib_Vonage [core.Project]: 
   comment: The Vonage communication connector library for SMS, Whatsup, Viber facebook messenger and MMS
   version: 1.0
+  ↓lib_vonage_fullsync [connectors.FullSyncConnector]: 🗏 connectors/lib_vonage_fullsync.yaml
   ↓Messages_API [connectors.HttpConnector]: 🗏 connectors/Messages_API.yaml
   ↓Video_API [connectors.HttpConnector]: 🗏 connectors/Video_API.yaml
   ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml
+  ↓ApiCreateVideoSession [sequences.GenericSequence]: 🗏 sequences/ApiCreateVideoSession.yaml
+  ↓ApiGetVideoApiKey [sequences.GenericSequence]: 🗏 sequences/ApiGetVideoApiKey.yaml
+  ↓ApiGetVideoToken [sequences.GenericSequence]: 🗏 sequences/ApiGetVideoToken.yaml
+  ↓ApiSendSMS [sequences.GenericSequence]: 🗏 sequences/ApiSendSMS.yaml
+  ↓ApiSendWhatsapp [sequences.GenericSequence]: 🗏 sequences/ApiSendWhatsapp.yaml
+  ↓AppCreateVideoSession [sequences.GenericSequence]: 🗏 sequences/AppCreateVideoSession.yaml
+  ↓ApplistAvailableVideoSessions [sequences.GenericSequence]: 🗏 sequences/ApplistAvailableVideoSessions.yaml
+  ↓AppRemoveVideoSession [sequences.GenericSequence]: 🗏 sequences/AppRemoveVideoSession.yaml
   ↓buildAuthorization [sequences.GenericSequence]: 🗏 sequences/buildAuthorization.yaml
-  ↓buildJWT [sequences.GenericSequence]: 🗏 sequences/buildJWT.yaml
-  ↓createVideoSession [sequences.GenericSequence]: 🗏 sequences/createVideoSession.yaml
-  ↓getVideoToken [sequences.GenericSequence]: 🗏 sequences/getVideoToken.yaml
-  ↓sendSMS [sequences.GenericSequence]: 🗏 sequences/sendSMS.yaml
-  ↓sendWhatsapp [sequences.GenericSequence]: 🗏 sequences/sendWhatsapp.yaml
   ↓Mobile_application [core.MobileApplication]: 
     ↓Android [mobileplatforms.Android]: 
     ↓iOS [mobileplatforms.IOs]: 
     ↓Application [mobile.components.ApplicationComponent]: 🗏 mobileApplication.yaml
+  ↓CouchDb_schema [references.ImportXsdSchemaReference]: 
+    urlpath: http://localhost:18080/convertigo/xsd/couchdb/CouchDb.xsd

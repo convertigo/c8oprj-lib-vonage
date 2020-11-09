@@ -5,38 +5,58 @@
         - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
         - com.twinsoft.convertigo.beans.common.FormatedContent: 
           →: |
-            '    		function handleError(error) {
+            '            page.c8o.log.debug(''[OpenTok] token     : '' + vars.token);
+                        page.c8o.log.debug(''[OpenTok] apiKey    : '' + vars.apiKey);
+                        page.c8o.log.debug(''[OpenTok] sessionId : '' + vars.sessionId);
+                        page.c8o.log.debug(''[OpenTok] mode      : '' + vars.mode);
+            
+            		    
+                		function handleError(error) {
                 		    if (error) {
-                                page.c8o.log.error(''[OpenTok] error : '' + error);
+                                page.c8o.log.error(''[OpenTok] error : '' + error.message);
                 		    }
                 		}
                 		
                 		var session = OT.initSession(vars.apiKey, vars.sessionId);
-                		session.on(''streamCreated'', function(event) {
-                		     session.subscribe(event.stream, ''subscriber'', {
-                		       insertMode: ''append'',
-                		       width: ''100%'',
-                		       height: ''100%''
-                		     }, handleError);
-                		});		
                 		
-                		const publisher = OT.initPublisher(''publisher'', {
-                		        insertMode: ''append'',
-                		        width: ''100%'',
-                		        height: ''100%''
-                		}, handleError)
-                		      
-                		// Connect to the session
-                        session.connect(vars.token, function(error) {
-                            // If the connection is successful, initialize a publisher and publish to the session
-                            if (error) {
-                                handleError(error);
-                            } else {
-                                session.publish(publisher, handleError);
-                            }
-                        });
+                		if (vars.mode == "subscriber") {
+                    		session.on(''streamCreated'', function(event) {
+                    		     session.subscribe(event.stream, ''subscriber'', {
+                    		       insertMode: ''append'',
+                    		       width: ''100%'',
+                    		       height: ''100%''
+                    		     }, handleError);
+                                 resolve();
+                                 return;
+                    		});
+                		}
                 		
-                		resolve();
+                        if (vars.mode == "publisher") {
+                    		const publisher = OT.initPublisher(''publisher'', {
+                    		        insertMode: ''append'',
+                    		        width: ''100%'',
+                    		        height: ''100%''
+                    		}, handleError)
+                    		
+                            // Connect to the session
+                            session.connect(vars.token, function(error) {
+                                // If the connection is successful, initialize a publisher and publish to the session
+                                if (error) {
+                                    handleError(error);
+                                } else {
+                                    session.publish(publisher, handleError);
+                                }
+                                resolve();
+                                return;
+                            });
+                        }
+            
+                        if (vars.mode == "moderator") {
+                            resolve();
+                            return;
+                        }
+                        
+                        page.c8o.log.error(''[OpenTok] error, unsupported mode. Must be publisher, subscriber or moderator  : '' + vars.mode);
             '
     module_ts_imports: 
       - xmlizable: 
@@ -75,17 +95,22 @@
       varValue: 
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-          - MobileSmartSourceType: plain:46971114
+          - MobileSmartSourceType: script:params1604074988538.apiKey
     ↓sessionId [mobile.components.UIControlVariable-1604079564607]: 
       varValue: 
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-          - MobileSmartSourceType: plain:2_MX40Njk3MTExNH5-MTYwNDA4MDA1Njg3M35jN1A4Rk83UUM0MXVWRXl6VnI2NlViYm9-fg
+          - MobileSmartSourceType: script:params1604074988538.sessionId
     ↓token [mobile.components.UIControlVariable-1604079900661]: 
       varValue: 
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-          - MobileSmartSourceType: plain:T1==cGFydG5lcl9pZD00Njk3MTExNCZzaWc9MGQ2MjdiYjVmOWIzOTAzMjU2ZDAxOTNiOWE3YTZkOGM1NzY0ZTM0YzpzZXNzaW9uX2lkPTJfTVg0ME5qazNNVEV4Tkg1LU1UWXdOREE0TURBMU5qZzNNMzVqTjFBNFJrODNVVU0wTVhWV1JYbDZWbkkyTmxWaVltOS1mZyZjcmVhdGVfdGltZT0xNjA0MDgwMTA1Jm5vbmNlPTAuNTA5NjU1MTQzOTE2MjAxOCZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNjA0MDgzNzA1JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9
+          - MobileSmartSourceType: script:params1604074988538.token
+    ↓mode [mobile.components.UIControlVariable-1604749769355]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:params1604074988538.mode
 ↓Div [mobile.components.UIDynamicElement-1604078553712]: 
   beanData: '{"ionBean":"DivTag"}'
   identifier: publisher
@@ -122,3 +147,11 @@
           →: |
             '	height: 100%
             '
+↓sessionId [mobile.components.UICompVariable-1604744486619]: 
+  comment: The sessionId
+↓token [mobile.components.UICompVariable-1604744505461]: 
+  comment: The token for connection
+↓apiKey [mobile.components.UICompVariable-1604749645826]: 
+  comment: The apiKey as declared in the API portal
+↓mode [mobile.components.UICompVariable-1604859987359]: 
+  value: '''PUBLISHER'''
