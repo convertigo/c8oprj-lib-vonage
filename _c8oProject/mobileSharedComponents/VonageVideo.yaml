@@ -3,8 +3,8 @@
   identifier: opentok
   tagName: div
   ↓Event [mobile.components.UIControlEvent-1604916937522]: 
-    attrName: (click)
-    eventName: onClick
+    attrName: (blur)
+    eventName: (blur)
     ↓useOpenTok [mobile.components.UICustomAction-1604075099202]: 
       actionValue: 
         - xmlizable: 
@@ -136,8 +136,8 @@
   identifier: opentokleave
   tagName: div
   ↓Event [mobile.components.UIControlEvent-1604938486111]: 
-    attrName: (click)
-    eventName: onClick
+    attrName: (blur)
+    eventName: (blur)
     ↓LeaveOpenTok [mobile.components.UICustomAction-1604938486114]: 
       actionValue: 
         - xmlizable: 
@@ -230,8 +230,12 @@
     attrValue: 
       - xmlizable: 
         - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-        - MobileSmartSourceType: plain:opentok
+        - MobileSmartSourceType: plain:opentokleave
   ↓Text [mobile.components.UIText-1604939084346]: 
+    textValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: plain:Leave Div
 ↓mode [mobile.components.UICompVariable-1604859987359]: 
   value: '''PUBLISHER'''
 ↓PageEvent [mobile.components.UIPageEvent-1604915813759]: 
@@ -243,26 +247,17 @@
           →: |
             '    		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
                         setTimeout(()=> {
-                            page["opentok"].nativeElement.dispatchEvent(new MouseEvent(''mousedown'', {
+                            page["opentok"].nativeElement.dispatchEvent(new MouseEvent(''blur'', {
                                 view: window,
                                 bubbles: true,
                                 cancelable: true
                             }));
-            
-                            page["opentok"].nativeElement.dispatchEvent(new MouseEvent(''click'', {
-                                view: window,
-                                bubbles: true,
-                                cancelable: true
-                            }));
-                            
                             // page.c8o.log.debug(''[MB] *** click done :'' );
                         }, 0)
                 		resolve();
             '
     comment: |
-      This will find the OpenTokDiv and Simulate a Click on it to trigger the OpenTok CustomAction
-      installing the video. We have to do it this way as we cannot use paramXXXXXX.property in Page 
-      Events.
+      This will find the OpenTokDiv and Simulate a blur event on it to trigger the OpenTok CustomAction installing the video. We have to do it this way as we cannot use paramXXXXXX.property in Page Events.
       
 ↓Directive [mobile.components.UIControlDirective-1604934229228]: 
   directiveName: If
@@ -313,7 +308,7 @@
               '	height: 100%
               '
 ↓PageEvent1 [mobile.components.UIPageEvent-1604938421535]: 
-  viewEvent: onWillUnload
+  viewEvent: onWillLeave
   ↓findOpenTokDivAndQuit [mobile.components.UICustomAction-1604938448125]: 
     actionValue: 
       - xmlizable: 
@@ -321,21 +316,15 @@
         - com.twinsoft.convertigo.beans.common.FormatedContent: 
           →: |
             '    		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
-                        page["opentokleave"].nativeElement.dispatchEvent(new MouseEvent(''mousedown'', {
-                            view: window,
-                            bubbles: true,
-                            cancelable: true
-                        }));
             
-                        page["opentokleave"].nativeElement.dispatchEvent(new MouseEvent(''click'', {
+                        page["opentokleave"].nativeElement.dispatchEvent(new MouseEvent(''blur'', {
                             view: window,
                             bubbles: true,
                             cancelable: true
                         }));
+                        // page.c8o.log.debug(''[LeaveOT] ''+ page["opentokleave"].nativeElement.innerHTML);
                 		resolve();
             '
     comment: |
-      This will find the OpenTokDiv and Simulate a Click on it to trigger the OpenTok CustomAction
-      installing the video. We have to do it this way as we cannot use paramXXXXXX.property in Page 
-      Events.
+      This will find the OpenTokDiv and Simulate a blur event on it to trigger the OpenTok CustomAction closing  the video. We have to do it this way as we cannot use paramXXXXXX.property in Page Events.
       
