@@ -1,5 +1,5 @@
 // Use this gradle file to build the Vonage.jar FAT JAR ...
-// You must manually remove slf4j-api-1.7.30.jar from the fat JAT to avoid class conflic with Convertigo server
+// You must manually remove slf4j-api-1.7.30.jar from the fat JAT to avoid class conflict with Convertigo server
  
 apply plugin: 'java'
 
