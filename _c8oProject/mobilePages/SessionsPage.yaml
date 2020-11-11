@@ -96,7 +96,7 @@ title: Session manager
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-            - MobileSmartSourceType: plain:You can add sessions by tapping on the '+' icon. The session will displayed in the list. Once the session created, you slide it right to reveal the 'delete' button to remove it or slide left to reveal the 'publish' or 'subscribe' button. 
+            - MobileSmartSourceType: plain:You can add sessions by tapping on the '+' icon. The session will displayed in the list. Once the session created, you can slide it right to reveal the 'delete' button to remove it, or slide it left to reveal the 'publish' or 'subscribe' buttons. 
       ↓Break [mobile.components.UIDynamicElement-1605105664776]: 
         beanData: '{"ionBean":"Break"}'
         selfClose: true
