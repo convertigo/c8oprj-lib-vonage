@@ -7,19 +7,23 @@ https://www.vonage.co.uk/communications-apis/?icmp=mainnav_products_communicatio
 
 
 ## Installation
-In you Convertigo Studio, Use file->import->Convertigo Project and paste
+In your Convertigo Studio, Use file->import->Convertigo Project and paste
 
     lib_Vonage=https://github.com/convertigo/c8oprj-lib-vonage/archive/master.zip
 
 In the Project Remote Url field
 
 ## Usage for messaging APIs
+The Library provides sequences you can use to in your apps to send SMS, and other messages.
+
 ### Configuring symbols
 This library needs 2 symbols :
-```
-lib_Vonage.apiKey
-lib_Vonage.apiSecret.secret
-```
+
+|Symbol    | usage                   |
+|------------| ------------------------|
+|lib_Vonage.apiKey  | The Api Key you can find in the https://dashboard.nexmo.com/ dashboard |
+|lib_Vonage.apiSecret.secret | The API Secret you can find in the same place. |
+
 Configure these symbols to the correct value you find in the Vonage API dashboard
 
 https://dashboard.nexmo.com/
