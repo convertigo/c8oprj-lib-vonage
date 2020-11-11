@@ -301,7 +301,8 @@
           - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
           - com.twinsoft.convertigo.beans.common.FormatedContent: 
             →: |
-              '	height: 100%
+              '	height: 100%;
+              	display: grid
               '
 ↓PageEvent1 [mobile.components.UIPageEvent-1604938421535]: 
   viewEvent: onWillLeave
