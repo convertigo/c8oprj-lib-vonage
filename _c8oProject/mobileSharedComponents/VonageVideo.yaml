@@ -231,11 +231,6 @@
       - xmlizable: 
         - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
         - MobileSmartSourceType: plain:opentokleave
-  ↓Text [mobile.components.UIText-1604939084346]: 
-    textValue: 
-      - xmlizable: 
-        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-        - MobileSmartSourceType: plain:Leave Div
 ↓mode [mobile.components.UICompVariable-1604859987359]: 
   comment: The mode. can be publisher, subscriber or moderator. Default is publisher
   value: '''publisher'''
