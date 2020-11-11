@@ -1,3 +1,5 @@
+accessibility: Hidden
+comment: Useful to get the Video API key on the client as the Video components needs it
 ↓jElement [steps.ElementStep-1604845988197]: 
   expression: apiKey
   nodeName: apiKey

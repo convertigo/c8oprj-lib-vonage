@@ -1,3 +1,5 @@
+accessibility: Hidden
+comment: Creates a video session and returns it. Should be saved in a FS database
 ↓createVideoSession [steps.SimpleStep-1604513680208]: 
   expression: |
     ot = com.opentok.OpenTok.Builder(apiKey, apiSecret)

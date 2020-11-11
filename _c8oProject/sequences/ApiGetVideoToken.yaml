@@ -1,3 +1,5 @@
+accessibility: Hidden
+comment: Generates a token for the Video components. 
 ↓getToken [steps.SimpleStep-1604684385618]: 
   expression: |
     'ot = com.opentok.OpenTok(apiKey, apiSecret);
@@ -29,9 +31,13 @@
   expression: jToken
   nodeName: token
 ↓role [variables.RequestableVariable-1604685671575]: 
+  comment: token role. Can be PUBLISHER, SUBSCRIBER or MODERATOR
 ↓data [variables.RequestableVariable-1604685685998]: 
+  comment: User data to inserted in the token
 ↓expire [variables.RequestableVariable-1604685901822]: 
+  comment: Exipire in seconds
 ↓sessionID [variables.RequestableVariable-1604845106081]: 
+  comment: The sessionID to generate the token on
 ↓apiKey [variables.RequestableVariable-1604845262201]: 
   value: ${lib_Vonage.video.apiKey}
 ↓apiSecret [variables.RequestableVariable-1604845262204]: 
