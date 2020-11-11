@@ -1,6 +1,8 @@
 ↑isRoot: true
+icon: aperture
+iconPosition: item-left
 segment: path-to-sessionspage
-title: Title for Page
+title: Session manager
 ↓FabContainer [mobile.components.UIDynamicElement-1604829267331]: 
   beanData: |
     '{
@@ -70,6 +72,44 @@ title: Title for Page
 ↓Content [mobile.components.UIDynamicElement-1604075160451]: 
   beanData: '{"ionBean":"Content"}'
   tagName: ion-content
+  ↓CardContainer [mobile.components.UIDynamicElement-1605105408256]: 
+    beanData: '{"ionBean":"Card"}'
+    tagName: ion-card
+    ↓CardTitle [mobile.components.UIDynamicElement-1605105439856]: 
+      beanData: '{"ionBean":"CardTitle"}'
+      tagName: ion-card-title
+      ↓Text [mobile.components.UIText-1605105452719]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: plain:Instructions
+      ↓Attr [mobile.components.UIAttribute-1605105618969]: 
+        attrName: 
+        attrValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: plain:text-center
+    ↓CardContent [mobile.components.UIDynamicElement-1605105444128]: 
+      beanData: '{"ionBean":"CardContent"}'
+      tagName: ion-card-content
+      ↓Text [mobile.components.UIText-1605105478015]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: plain:You can add sessions by tapping on the '+' icon. The session will displayed in the list. Once the session created, you slide it right to reveal the 'delete' button to remove it or slide left to reveal the 'publish' or 'subscribe' button. 
+      ↓Break [mobile.components.UIDynamicElement-1605105664776]: 
+        beanData: '{"ionBean":"Break"}'
+        selfClose: true
+        tagName: br
+      ↓Break1 [mobile.components.UIDynamicElement-1605105682862]: 
+        beanData: '{"ionBean":"Break"}'
+        selfClose: true
+        tagName: br
+      ↓Text1 [mobile.components.UIText-1605105671160]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: plain:'publish' will publish you camera on this session, while 'subscribe' will receive the session video stream and display it
   ↓ListContainer [mobile.components.UIDynamicElement-1604828742553]: 
     beanData: '{"ionBean":"List"}'
     tagName: ion-list

@@ -237,7 +237,8 @@
         - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
         - MobileSmartSourceType: plain:Leave Div
 ↓mode [mobile.components.UICompVariable-1604859987359]: 
-  value: '''PUBLISHER'''
+  comment: The mode. can be publisher, subscriber or moderator. Default is publisher
+  value: '''publisher'''
 ↓PageEvent [mobile.components.UIPageEvent-1604915813759]: 
   ↓findOpenTokDivAndInit [mobile.components.UICustomAction-1604926852558]: 
     actionValue: 
