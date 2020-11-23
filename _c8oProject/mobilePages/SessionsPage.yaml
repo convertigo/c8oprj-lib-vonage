@@ -52,7 +52,7 @@ title: Session manager
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-            - MobileSmartSourceType: plain:Available Sessions
+            - MobileSmartSourceType: plain:HELLO
     ↓Button [mobile.components.UIDynamicElement-1604129273994]: 
       beanData: '{"ionBean":"Button","MenuMode":"plain:menuToggle"}'
       comment: A button to toggle the menu
@@ -72,6 +72,12 @@ title: Session manager
 ↓Content [mobile.components.UIDynamicElement-1604075160451]: 
   beanData: '{"ionBean":"Content"}'
   tagName: ion-content
+  ↓Image [mobile.components.UIDynamicElement-1606147982102]: 
+    beanData: '{"ionBean":"Image","url":"script:''data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT4AAACfCAMAAABX0UX9AAAAflBMVEX\/\/\/8AAACOjo7y8vLd3d1qamqAgIAiIiKfn59ycnKbm5v8\/Pw9PT329vYpKSlNTU2IiIizs7O5ubns7Oytra3S0tLg4OBKSkre3t7X19cRERHKysq9vb1iYmJUVFR6enoZGRlvb2+UlJQvLy9AQEA2NjYLCwsuLi5bW1tmZmaSQHypAAAIDUlEQVR4nO2c6WLaOhCF2UKhhLAGwpJA2iRN3\/8Fb\/CMrNFItiWDU25yvl+NLVnysTQ6WmirBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwTfjVdnhJyrx0M7cXDVXyehkrBTYpmf+4eZ+bquQV03cl+JuQdaek7zVWyetlVb8DPrk5181V8op5d0XoR2fsKeF3DVbyerlXKoxjMw7dfHdNVvKKeXVlGERm6yrZl41W8nqZuzIcI7Mpy9MeNVjFq2br6jCPy6XU6zRbxytm4ApxG5VppuT7fpbZoK1z1BB65+b5jpbZoKzzU0QWWGaLts6r6iywzIJHV4xhZYaHOv39y6Ktc7cqw8FNf2y+ileNss6\/KpLDMrso61zlgT\/DMo9Xm82m17wfonIq+1s5ac1JpY6wzPfTzgfTgloOTjc7Yrq4P+Re\/nHmzsLHWdrOT\/WI3amAqa\/26mZ7HBZ+BFvO9qDi96wTYnoffgFXkPL5fw3LPC6LCjzyz8zfP9XzD1J1EzjU5IjyeP6JDVbYS6iXPs7kzb\/tILPgk7R13odVIOpY5imlDd6jgWjLf90f\/UqL3pDHXbclD4LymcQ\/AuFl88MrZi0awk2KfNo6lxk5bZmjFvgXng76Hbnv6g0UYqhTf\/Rq5yFh+XKH4Df7cDn2AWnyaetcokk9y0zV+RG4wwPRqOSt2u0bk9qO+k73Dcq3sPn1MmZROXn7S5NPW+fHgmS+0JGWmRen\/agwohs0\/uQt+2nZ647Gq\/2zuWDajzBNsvsG5RNdSg01udOdZOU8zEyb+GNS8OdWvBWtR2nrXDge1LXMkyy5vxW6lOXxQ9dWh65Z1eZLQr538ZSQfBTQ15mpfXML3Xrl9G5dnUm+2JdrtW5dWYo2PWpbZm5Y3shPEZzGn06obB7oX\/zyRU8KyUfXdvR9nGbP8eLgJOddH\/6L5It3tNo6F2x61LfMtC2so8K+bV+cx\/8blWQphXc+n+2+IfneTpe2\/FS5jMnxQu3KjuhDcvdMlU+bYW1MZZ0sCavM3IqUB6P5Ii2SLZ3vb3kXqpJ871QN230D8u3Na1C4EYPhLFzOXH7fZPmUi9wGE52zykwBx+0xHHJp\/KH47YcDHq2ydyH5Dtxo8+4bkG+dXRqb7KJNF5XTe3h46PHnTZZPW+fgGP3bTZO0yszfx\/G71LBeZQUCVSYlst5L8g2NUzCfz5dvYyu4dr90cTmCZPm0dX4NJKllmVW1pYXldkXxhrxNyDKROJmxNvJxDJw4KaR8Q1tBaqp5nNkUliNIHXmjHN15q8z+zO0gr1DsCcVc6uJZtzfymaGOu6AnH6Xj4ToLG7l3mduPUQzJ13c5lB4iUNZ54iXQApdOjX28mRtf4DcZFD6Txwv7z9Mkjif1C5FXyEcOYS6fbKJRcTmC8KyjdGFLW2cvgbLMoSlYRJ1sNvZ5HGHojUOzGHIaWVu38rH9oEHbk49dC0GZTDSiTpDHne7xTnIciKomydd6cdJ6puTsVWY1c2MBpvwniRlaUaOEL7YO2RLCXtRCy0cdNA+zQ\/loivG5gRIz4wyKHnXkc62zZ0q0ZS7XKsTa6tBS87Xk1tdqPdv8Wr5X9w1otGCb2HfTXk4+xzr7pkQd56hxMMOdub255STGvrz1rluefPciVcZEyNlxP1OZfBOXdcX5M2mdvaVbbZnrbBD8tkKYtp6XkzbynuCvMfDko0HwMR8yp2QZKExQo88jT5l8iW83sk\/xx121H1frYIacucn52okk30fwWLZQ8mlFcrJBaqeqP2ZGHU++1E0wa529TnSZgxnb\/PX5eTbWJc06iBE9bq3kmxbJlzU5FtcvZnK2fPl383eLlGX2W2cUvA\/UNfM1WU78nDePauy1lkspn+hDCiqNmr238snFnCNfbp29l6i5yqzhJtYxJkbOrONXXOygwN33IOUrWok3taYh\/k0X83gB+Yx19m4oy1z7LDOHB3M2Wt6KX+8TY6rcMGP5aHy6VWQXs0jLXUwFbzNsniUfW+fLW2YD153DkzvzjF5tFvLJqRLJR0HV+4kKvVg2aA0D5eSm4zz5yD54puR8y2xwNqCVkeKrlXsd8hCYGCcoDfV1b\/ZCLybcz0f8tlMPO98\/w7ic2LZDZ9TUKnPVKaISNuIxU3UvdqfNqZ\/tvpl8FKQDZ4y39oPNbTmbRbc3l4slUr7onTbLoN2QZTaIIdybF0bu8zry2e+RVZuCa2CxlzoQhYtOqJC7vpbPo2if1zIKnc9Vq8zVJyhLsL9H0o2vFXvKwC0\/7769Vu5aAlHL8Xsh\/RadC8j38fk8U6It80P1U0owrxs6ehJ3xkV9PnPq5iQfDQHB+ThJwvMBvbPYfutRxc6Vb+VHTGWZY06Pl8FbqgWHqCNOWClvY9rzST76V3ALi3q5iYpd14oNx9zvSb6kE1YuXmC7kGW2LG\/bx37x8kXl+T79FnQa73S+b9WfflCwEt853evn0nYHEy7lz6\/s4n768ZCdeGLk+b4Knl31QptIl+azTpdmxUT\/DrIWegEj8ndbgFA7mMd\/XZ\/\/FzhIfxZqscBbqQBl6MgXM3aDHOWAPmPY\/ULovfPv\/fu1ZNT5\/ZT\/6QV4U+szf770zdBdF+NGCmN1sEBvQ4BS3DNDGHXTmLjq3TU7tf5idNVPPSZQLwG9vVHwSwXgM9qpYyJPAziWBL7tf0kFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgC\/Ef0+LWSQXJZrgAAAAAElFTkSuQmCC''"}'
+    selfClose: true
+    tagName: img
+    ↓Animation [mobile.components.UIAnimation-1606148036840]: 
+      animationName: slideInUp
   ↓CardContainer [mobile.components.UIDynamicElement-1605105408256]: 
     beanData: '{"ionBean":"Card"}'
     tagName: ion-card
@@ -82,7 +88,7 @@ title: Session manager
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-            - MobileSmartSourceType: plain:Instructions
+            - MobileSmartSourceType: plain:Instructions d'usage
       ↓Attr [mobile.components.UIAttribute-1605105618969]: 
         attrName: 
         attrValue: 
