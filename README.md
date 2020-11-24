@@ -30,7 +30,7 @@ https://dashboard.nexmo.com/
 
 ### Sequences
 
-You can use the following sequences in your project :
+Youc can use the following sequences in your project :
 
 |sequence    | usage                   |
 |------------| ------------------------|
@@ -38,10 +38,10 @@ You can use the following sequences in your project :
 |sendWhatspp | send a WhatsApp Message |
 
 ## Usage for Video APIs
-The library provides APIs as sequences and Shared Components you can use in your apps. It also provides a sample app you can use to see how to use each of these.
+The library provides APIs as sequences and Shared Components you can use in you apps. It also provides a sample app you can use to see how to use each of these.
 
 ### Global Symbols
-The library needs some global symbols to be configured. 
+The library need some global symbols to be configured. 
 
 |Symbol    | usage                   |
 |------------| ------------------------|
@@ -78,10 +78,10 @@ The usual workflow for using the video components is :
 * Use the _ApiCreateVideoSession_ sequence to get a session id. This will call all the necessary Vonage APIs to get you one
 * You can use a FullSync database to store this session ID as it will have to be shared by other users.
 * Then use the _ApiGetVideoToken_ to get a PUBLISHER token or a SUBSCRIBER token on this session.
-* Use the utility _ApiGetVideoApiKey_ to get on the client side the Api Key configured as symbol on the Convertigo server.
-* Insert the _VonageVideo_ shared component in one of your pages passing all the necessary value for the components variable. be sure to use a PUBLISHER token for publisher mode and a SUBSCRIBER token for a subscriber mode.
+* Use the utility _ApiGetVideoApiKey_ to get on your client the Api Key configured as symbol on the Convertigo server.
+* Insert the _VonageVideo_ shared component in one you pages passing all the necessary value for the components variable. be sure to use a PUBLISHER token for publisher mode and a SUBSCRIBER token for a subscriber mode.
 * Enjoy : )
   
 ### The sample App
 
-The library come with a sample App. This demonstrates how to create sessions, how to store them in a FullSync database, how to launch subscriber or publisher pages to handle video sessions.
+The library come with a sample App. This demonstrates how to create session, how to store them in a FullSync database, how to launch subscriber or publisher pages to handle video sessions.
