@@ -25,6 +25,7 @@ server: api.nexmo.com
               - ↑value: Content-Type
             - java.lang.String: 
               - ↑value: application/json
+  httpPool: global
   httpVerb: POST
   includeDataType: false
   subDir: /

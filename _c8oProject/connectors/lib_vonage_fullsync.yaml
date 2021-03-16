@@ -1,3 +1,4 @@
+anonymousReplication: allow
 databaseName: lib_vonage_fullsync
 ↓DeleteDocument [transactions.couchdb.DeleteDocumentTransaction]: 
   ↓_use_docid [variables.RequestableVariable-1604842715807]: 
@@ -23,11 +24,15 @@ databaseName: lib_vonage_fullsync
         "_id": "_design\/Design_document",
         "filters": {},
         "updates": {},
-        "views": {"sessions": {"map": "function (doc) {\r\n
+        "views": {
+          "sessions": {
+            "map": "function (doc) {\r\n
           try {\r\n
               emit(doc._id, doc.data);\r\n
           } catch (err) {\r\n
               log(err.message);\r\n
           }\r\n
-      }"}}
+      }"
+          }
+        }
       }'

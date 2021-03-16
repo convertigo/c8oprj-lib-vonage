@@ -3,6 +3,7 @@ port: 443
 server: api.opentok.com
 ↓Default_transaction [transactions.HttpTransaction]: 
   ↑default: true
+  httpPool: global
 ↓session_create [transactions.JsonHttpTransaction]: 
   httpParameters: 
     - xmlizable: 
@@ -22,6 +23,7 @@ server: api.opentok.com
               - ↑value: Accept
             - java.lang.String: 
               - ↑value: application/json
+  httpPool: global
   httpVerb: POST
   subDir: session/create
   ↓archiveMode [variables.RequestableHttpVariable-1604404162780]: 
