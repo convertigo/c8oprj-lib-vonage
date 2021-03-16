@@ -9,7 +9,7 @@ https://www.vonage.co.uk/communications-apis/?icmp=mainnav_products_communicatio
 ## Installation
 In your Convertigo Studio, Use file->import->Convertigo Project and paste
 
-    lib_Vonage=https://github.com/convertigo/c8oprj-lib-vonage/archive/master.zip
+    lib_Vonage=https://github.com/convertigo/c8oprj-lib-vonage.git:branch=7.9.0
 
 In the Project Remote Url field
 
