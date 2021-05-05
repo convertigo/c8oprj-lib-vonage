@@ -15,5 +15,8 @@
   ↓ApplistAvailableVideoSessions [sequences.GenericSequence]: 🗏 sequences/ApplistAvailableVideoSessions.yaml
   ↓AppRemoveVideoSession [sequences.GenericSequence]: 🗏 sequences/AppRemoveVideoSession.yaml
   ↓buildAuthorization [sequences.GenericSequence]: 🗏 sequences/buildAuthorization.yaml
+  ↓GetSessionById [sequences.GenericSequence]: 🗏 sequences/GetSessionById.yaml
+  ↓GetVideoApiKey [sequences.GenericSequence]: 🗏 sequences/GetVideoApiKey.yaml
+  ↓GetVideoApiKeySecret [sequences.GenericSequence]: 🗏 sequences/GetVideoApiKeySecret.yaml
   ↓CouchDb_schema [references.ImportXsdSchemaReference]: 
     urlpath: http://localhost:18080/convertigo/xsd/couchdb/CouchDb.xsd

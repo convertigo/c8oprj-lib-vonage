@@ -1,0 +1,13 @@
+↓Input_variables [steps.InputVariablesStep-1620046430711]: 
+↓Element [steps.XMLElementStep-1620046525043]: 
+  nodeName: videoApiKey
+  sourceDefinition: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - java.lang.String: 
+          - ↑value: 1620046430711
+        - java.lang.String: 
+          - ↑value: ./videoApiKey/text()
+↓videoApiKey [variables.RequestableVariable-1620046238056]: 
+  value: ${lib_Vonage.video.apiKey}

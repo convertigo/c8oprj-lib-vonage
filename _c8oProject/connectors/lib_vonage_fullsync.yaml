@@ -3,6 +3,9 @@ databaseName: lib_vonage_fullsync
 ↓DeleteDocument [transactions.couchdb.DeleteDocumentTransaction]: 
   ↓_use_docid [variables.RequestableVariable-1604842715807]: 
     description: Document ID
+↓GetDocument [transactions.couchdb.GetDocumentTransaction]: 
+  ↓_use_docid [variables.RequestableVariable-1620047785814]: 
+    description: Document ID
 ↓GetServerInfo [transactions.couchdb.GetServerInfoTransaction]: 
   ↑default: true
 ↓GetSessions [transactions.couchdb.GetViewTransaction]: 
